@@ -17,7 +17,7 @@ class PassageirosController extends Controller
         //EXIBE ID INSERIDO NO BANCO
         //echo $passageiroInserido->id;
 
-        return redirect('/passageiros/incluir')->with('mensagem', 'Passageiro incluido com sucesso!')
+        return redirect('/passageiros/incluir')->with('mensagem', 'Passageiro incluido com sucesso! ')
             ->with('id', $passageiroInserido->id);
     }
 }

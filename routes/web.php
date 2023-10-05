@@ -18,11 +18,15 @@ Route::get('/', function () {
 });
 
 
+//ROTAS DE INCLUSÃO
 Route::get('/passageiros/incluir', function () {
     return view('passageiros.incluir');
 })->name('passageiros.novo');
-
 Route::post('/passageiros/incluir', [PassageirosController::class, 'incluir'])->name('passageiros.incluir');
 
+//ROTA DE LISTAGEM
 Route::get('/passageiros/listar', [PassageirosController::class, 'listar'])->name('passageiros.listar');
+
+//ROTA PARA REMOÇÃO
+Route::get('/passageiros/remover/{id}', [PassageirosController::class, 'deletar'])->name('passageiros.remover');
 

@@ -26,4 +26,12 @@ class PassageirosController extends Controller
         return view('passageiros.listar', compact('dados')); //DADOS será enviado à view, para listagem das linhas
         //LEMBRETE: passageiros.listar = passageiros -> nome da pasta dentro da pasta view, listar -> arquivo PHP propriamente da view.
     }
+
+    function deletar($id){
+        //LOCALIZA O REGISTRO
+        $passageiro = Passageiros::find($id);
+        //REMOVE O REGISTRO
+        $passageiro->delete();
+        return redirect('/passageiros/listar');
+    }
 }

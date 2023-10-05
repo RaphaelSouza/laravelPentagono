@@ -19,6 +19,7 @@
                     <th>Sobrenome</th>
                     <th>CPF</th>
                     <th>Passporte</th>
+                    <th>Ações</th>
                 </tr>   
             </thead>
             <tbody>
@@ -30,6 +31,7 @@
                     <td>{{ $linha->sobrenome }}</td>
                     <td>{{ $linha->cpf }}</td>
                     <td>{{ $linha->passaporte }}</td>
+                    <td><a href="{{ route('passageiros.remover', ['id' => $linha->id]) }}" class="btn btn-small btn-danger">-</a></td>
                 </tr>
                 @endforeach
             </tbody>

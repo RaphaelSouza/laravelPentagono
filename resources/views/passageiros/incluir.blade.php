@@ -33,6 +33,7 @@
 
             <input type="submit" value="Salvar" class="btn btn-success">
         </form>
+        <a href="{{ route('passageiros.listar') }}" class="btn btn-primary">Ir para a Listagem</a>
     </div>
 </body>
 </html>

@@ -20,4 +20,10 @@ class PassageirosController extends Controller
         return redirect('/passageiros/incluir')->with('mensagem', 'Passageiro incluido com sucesso! ')
             ->with('id', $passageiroInserido->id);
     }
+
+    function listar(){
+        $dados = Passageiros::all();
+        return view('passageiros.listar', compact('dados')); //DADOS será enviado à view, para listagem das linhas
+        //LEMBRETE: passageiros.listar = passageiros -> nome da pasta dentro da pasta view, listar -> arquivo PHP propriamente da view.
+    }
 }

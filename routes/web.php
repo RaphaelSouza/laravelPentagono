@@ -20,6 +20,9 @@ Route::get('/', function () {
 
 Route::get('/passageiros/incluir', function () {
     return view('passageiros.incluir');
-});
+})->name('passageiros.novo');
 
 Route::post('/passageiros/incluir', [PassageirosController::class, 'incluir'])->name('passageiros.incluir');
+
+Route::get('/passageiros/listar', [PassageirosController::class, 'listar'])->name('passageiros.listar');
+
